@@ -5,7 +5,7 @@ using UnityEngine;
 public class Manager_script : MonoBehaviour
 {
     public Material emission;
-    public Color color;
+    private Color color;
     public float speed = 1f;
     private float limiter;
 
