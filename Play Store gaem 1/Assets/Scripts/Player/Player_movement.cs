@@ -7,6 +7,7 @@ public class Player_movement : MonoBehaviour
     public float units_per_second;
     private Rigidbody player_rb;
 
+
     private void Awake()
     {
         player_rb = this.gameObject.transform.GetComponent<Rigidbody>();
@@ -15,5 +16,7 @@ public class Player_movement : MonoBehaviour
     void Update()
     {
         player_rb.velocity = new Vector3(0f, 0f, units_per_second);
+       // Debug.Log(Screen.width);
+
     }
 }

@@ -23,7 +23,7 @@ public class Manager_spawner : MonoBehaviour
             var Base = Instantiate(base_model,spawn_location,base_model.transform.rotation);
             Base.transform.SetParent(scene_base);
             offset += _offset;
-            Render_distance++;
+            Render_distance--;
         }
     }
 }
