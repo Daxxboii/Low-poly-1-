@@ -3,48 +3,69 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
 public class Touch_pos : MonoBehaviour
 {
-    public TextMeshProUGUI tmp;
-    Vector2 position;
-    Touch touch;
-    Vector2 initpos;
-    Vector2 dist;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TextMeshProUGUI txt;
+    private Rigidbody player_rb;
 
+    private Vector2 finalpos;
+    private Vector2 initpos;
+    private float dist;
+
+   
+ 
+
+    private Vector3 playerpos;
+
+    private void Awake()
+    {
+        player_rb = this.gameObject.transform.GetComponent<Rigidbody>();
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0)
-        {
-            touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
-            {
+        GetTouch();
+      
 
-                initpos = touch.position;
+        // Debug.Log(Screen.width);
 
-            }
-            if (touch.phase == TouchPhase.Moved)
-            {
-                position = touch.position;
-                tmp.text = "Touch Position : " + position;
-
-            }
-            if (touch.phase == TouchPhase.Ended)
-            {
-                position = touch.position;
-                tmp.text = "Touch Position : " + position;
-
-            }
-            dist = position - initpos;
-            touch = new Touch();
-
-        }
-        
     }
+    void GetTouch()
+    {
+       
+          
+            if (Input.GetMouseButtonDown(0))
+            {
+             
+           
+
+            }
+            if (Input.GetMouseButton(0))
+            {
+               finalpos = Input.mousePosition;
+              
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+               
+             
+               
+            }
+          
+            dist = finalpos.x - initpos.x;
+            Move();
+            
+
+ 
+    }
+
+    void Move()
+    {
+     
+   
+            txt.text = finalpos.x.ToString();
+      
+    }
+
 }
+

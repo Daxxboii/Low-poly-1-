@@ -1,7 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Touch_pos
+    - Manager_obstaclespawner
+    - Manager_script
+    - Manager_spawner
+    - Player_movement
+    Cinemachine.dll:
+    - Cinemachine.CinemachineBrain
+    - Cinemachine.CinemachineComposer
+    - Cinemachine.CinemachinePipeline
+    - Cinemachine.CinemachineTransposer
+    - Cinemachine.CinemachineVirtualCamera
     Unity.RenderPipelines.Core.Runtime.dll:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -28,13 +37,20 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.UI.DebugUIHandlerVector3
     - UnityEngine.Rendering.UI.DebugUIHandlerVector4
     - UnityEngine.Rendering.UI.UIFoldout
+    - UnityEngine.Rendering.Volume
+    - UnityEngine.Rendering.VolumeProfile
     Unity.RenderPipelines.Universal.Editor.dll:
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
     Unity.RenderPipelines.Universal.Runtime.dll:
+    - UnityEngine.Rendering.Universal.Bloom
     - UnityEngine.Rendering.Universal.ForwardRendererData
+    - UnityEngine.Rendering.Universal.LensDistortion
+    - UnityEngine.Rendering.Universal.LiftGammaGain
     - UnityEngine.Rendering.Universal.PostProcessData
+    - UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
+    - UnityEngine.Rendering.Universal.Vignette
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -64,7 +80,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/Testing.unity:
+    Assets/Scenes/Main.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -73,13 +89,29 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 96
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -90,11 +122,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11328}
     - Class: 114
+      Script: {instanceID: 11382}
+    - Class: 114
       Script: {instanceID: 11446}
     - Class: 114
       Script: {instanceID: 11552}
     - Class: 114
       Script: {instanceID: 11572}
+    - Class: 114
+      Script: {instanceID: 11608}
     - Class: 114
       Script: {instanceID: 11670}
     - Class: 114
@@ -108,6 +144,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11968}
     - Class: 114
+      Script: {instanceID: 12102}
+    - Class: 114
       Script: {instanceID: 12270}
     - Class: 114
       Script: {instanceID: 12316}
@@ -118,23 +156,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12562}
     - Class: 114
-      Script: {instanceID: 12596}
-    - Class: 114
       Script: {instanceID: 12620}
     - Class: 114
       Script: {instanceID: 12820}
     - Class: 114
       Script: {instanceID: 12860}
     - Class: 114
+      Script: {instanceID: 12892}
+    - Class: 114
       Script: {instanceID: 12924}
     - Class: 114
+      Script: {instanceID: 12992}
+    - Class: 114
+      Script: {instanceID: 13022}
+    - Class: 114
       Script: {instanceID: 13030}
+    - Class: 114
+      Script: {instanceID: 13148}
+    - Class: 114
+      Script: {instanceID: 13296}
     - Class: 114
       Script: {instanceID: 13326}
     - Class: 114
       Script: {instanceID: 13352}
     - Class: 114
       Script: {instanceID: 13496}
+    - Class: 114
+      Script: {instanceID: 13516}
     - Class: 114
       Script: {instanceID: 13658}
     - Class: 114
@@ -146,11 +194,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13750}
     - Class: 114
+      Script: {instanceID: 13840}
+    - Class: 114
       Script: {instanceID: 13878}
     - Class: 114
       Script: {instanceID: 13908}
     - Class: 114
       Script: {instanceID: 13916}
+    - Class: 114
+      Script: {instanceID: 13948}
+    - Class: 114
+      Script: {instanceID: 14116}
     - Class: 114
       Script: {instanceID: 14146}
     - Class: 114
@@ -160,6 +214,10 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14322}
     - Class: 114
+      Script: {instanceID: 14382}
+    - Class: 114
+      Script: {instanceID: 14484}
+    - Class: 114
       Script: {instanceID: 14562}
     - Class: 114
       Script: {instanceID: 14610}
@@ -167,6 +225,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14744}
     - Class: 114
       Script: {instanceID: 14790}
+    - Class: 114
+      Script: {instanceID: 14966}
     - Class: 114
       Script: {instanceID: 14986}
     - Class: 114
@@ -178,12 +238,16 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15046}
     - Class: 114
+      Script: {instanceID: 15144}
+    - Class: 114
       Script: {instanceID: 15160}
     - Class: 114
       Script: {instanceID: 15166}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 134
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -196,6 +260,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -560,7 +626,7 @@ ScriptsOnlyBuild:
     className: CinemachineFramingTransposer
   - hash:
       serializedVersion: 2
-      Hash: f40b79754544272c396c1b26391023e1
+      Hash: 40b425e49596c77ab9e17cb8ac211126
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Touch_pos
@@ -626,7 +692,7 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
-      Hash: 6597fd57789145f2b12bb21260364f05
+      Hash: 04b98139cd1f416451e5e5f597f996bf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player_movement
@@ -1328,5 +1394,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Testing.unity
-  playerPath: C:/Users/Daxx/Desktop/test.apk
+  - Assets/Scenes/Main.unity
+  playerPath: C:/Users/Daxx/Desktop/Testing.apk
