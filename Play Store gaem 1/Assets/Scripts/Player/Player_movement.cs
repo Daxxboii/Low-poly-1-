@@ -14,7 +14,7 @@ public class Player_movement : MonoBehaviour
     private Touch touch;
     private Vector3 correction;
     //test
-    public TextMeshProUGUI tmp;
+   // public TextMeshProUGUI tmp;
  
 
     private void Awake()
@@ -59,7 +59,7 @@ public class Player_movement : MonoBehaviour
 
     void Testing()
     {
-        tmp.text = touch.deltaPosition.x.ToString();
+       // tmp.text = touch.deltaPosition.x.ToString();
     }
 }
 

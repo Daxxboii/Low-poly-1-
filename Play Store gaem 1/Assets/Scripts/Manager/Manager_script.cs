@@ -12,7 +12,7 @@ public class Manager_script : MonoBehaviour
     private void Awake()
     {
         limiter = 0f;
-        color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);
+        color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
     }
     void Update()
     {

@@ -111,3 +111,5 @@ MonoBehaviour:
   obstacle: {fileID: 6656254040784046764, guid: 109655bff2700894e9a60b065210f8cb,
     type: 3}
   z_offset: -1.2
+  coin: {fileID: 2365487783743995767, guid: 9cb0e9b999dae2b47b650511eda91d46, type: 3}
+  coin_y_offset: -0.7
